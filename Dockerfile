@@ -1,5 +1,7 @@
 FROM mcr.microsoft.com/devcontainers/php:1-8.2-bookworm
 
+RUN rm -f /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+
 
 # Instalar cliente de MySQL en lugar de MariaDB
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
