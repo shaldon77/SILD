@@ -28,5 +28,9 @@ WORKDIR /var/www/html
 # Copiar el código de la aplicación
 COPY . .
 
+
+# Instala las dependencias necesarias
+RUN npm install tailwindcss @tailwindcss/vite
+
 # Instalar dependencias de Node y compilar assets
 RUN npm install && npm run build
